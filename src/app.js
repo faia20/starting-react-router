@@ -34,24 +34,22 @@ const ContactPage = (props) => (
 )
 
 const Nav = () => (
-  <div>
-    <Link to='/'>Home</Link>&nbsp;
-    <Link to='/contact-us'>Contact Us</Link>
-  </div>
+  <nav>
+    <Link onlyActiveOnIndex to='/' activeClassName='active'>Home</Link>&nbsp;
+    <Link to='/contact-us' activeClassName='active'>Contact Us</Link>
+  </nav>
 )
 
 const ContactSubNav = () => (
-  <div>
-    <Link to='/contact-us/contact-london'>London Office</Link>
-    <Link to='/contact-us/contact-kiev'>Kiev Office</Link>
-  </div>
+  <aside>
+    <Link to='/contact-us/contact-london' activeClassName='active'>London Office</Link><br/>
+    <Link to='/contact-us/contact-kiev' activeClassName='active'>Kiev Office</Link>
+  </aside>
 )
 
 const Home = () => <h1>Hello from Home!</h1>
 const ContactDetailsLondon = () => <h1>Office London: Find us @ 123 Paddington</h1>
 const ContactDetailsKiev = () => <h1>Office Kiev: Find us @ 1234 Kiev</h1>
-const NotFound = () => (
-  <h1>404... This page is not found!</h1>
-)
+const NotFound = () => <h1>404... This page is not found!</h1>
 
 export default App
